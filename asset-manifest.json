@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/React-Portfolio/static/css/main.d97a747b.css",
+    "main.js": "/React-Portfolio/static/js/main.989e209f.js",
+    "static/js/787.65fb463d.chunk.js": "/React-Portfolio/static/js/787.65fb463d.chunk.js",
+    "static/media/header-image.png": "/React-Portfolio/static/media/header-image.3d30de072e098529bb03.png",
+    "static/media/myProfile-img.jpg": "/React-Portfolio/static/media/myProfile-img.9f68dda037fed78aa20b.jpg",
+    "static/media/open-sans-all-400-normal.woff": "/React-Portfolio/static/media/open-sans-all-400-normal.cb2542fccedadc68d737.woff",
+    "static/media/open-sans-cyrillic-ext-400-normal.woff2": "/React-Portfolio/static/media/open-sans-cyrillic-ext-400-normal.01b11c560bc52c756c23.woff2",
+    "static/media/open-sans-latin-400-normal.woff2": "/React-Portfolio/static/media/open-sans-latin-400-normal.a1535f451fb7bb98f526.woff2",
+    "static/media/open-sans-latin-ext-400-normal.woff2": "/React-Portfolio/static/media/open-sans-latin-ext-400-normal.ccfa20f8de7f73249c39.woff2",
+    "static/media/open-sans-cyrillic-400-normal.woff2": "/React-Portfolio/static/media/open-sans-cyrillic-400-normal.5a546777799f438b6bb4.woff2",
+    "static/media/open-sans-greek-400-normal.woff2": "/React-Portfolio/static/media/open-sans-greek-400-normal.3064bf7e87155fcb14a1.woff2",
+    "static/media/open-sans-hebrew-400-normal.woff2": "/React-Portfolio/static/media/open-sans-hebrew-400-normal.daafcec89c2332b84c25.woff2",
+    "static/media/open-sans-vietnamese-400-normal.woff2": "/React-Portfolio/static/media/open-sans-vietnamese-400-normal.473f6b09ca8f5658857e.woff2",
+    "static/media/bxl_react.svg": "/React-Portfolio/static/media/bxl_react.5834f7fec13c5e095277349198aafc0e.svg",
+    "static/media/open-sans-greek-ext-400-normal.woff2": "/React-Portfolio/static/media/open-sans-greek-ext-400-normal.1ed998a42083750e175e.woff2",
+    "static/media/cib_expo.svg": "/React-Portfolio/static/media/cib_expo.6e9f555b8edb97a84ee7c9c9ad799d74.svg",
+    "static/media/GithubSvg.svg": "/React-Portfolio/static/media/GithubSvg.38adcf23ad7887394b2f6891c337cb45.svg",
+    "static/media/LinkInSvg.svg": "/React-Portfolio/static/media/LinkInSvg.ce3162d3e0375f5ab67038180d6aa3b8.svg",
+    "static/media/TwitterSvgs.svg": "/React-Portfolio/static/media/TwitterSvgs.97877988d6df3ae67b1cf3a90a7b8fab.svg",
+    "index.html": "/React-Portfolio/index.html",
+    "static/media/facebookSvg.svg": "/React-Portfolio/static/media/facebookSvg.3593cdc38703235fdd626df9623257b9.svg",
+    "static/media/EmailSvg.svg": "/React-Portfolio/static/media/EmailSvg.c6406c1a0186537f31a69f099097e3de.svg",
+    "static/media/teenyicons_firebase-outline.svg": "/React-Portfolio/static/media/teenyicons_firebase-outline.7781fb8ae9c6eda1901514229b12e8ff.svg",
+    "static/media/ic_sharp-javascript.svg": "/React-Portfolio/static/media/ic_sharp-javascript.915f1d794b04b7a6e46af71b77baef5f.svg",
+    "main.d97a747b.css.map": "/React-Portfolio/static/css/main.d97a747b.css.map",
+    "main.989e209f.js.map": "/React-Portfolio/static/js/main.989e209f.js.map",
+    "787.65fb463d.chunk.js.map": "/React-Portfolio/static/js/787.65fb463d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d97a747b.css",
+    "static/js/main.989e209f.js"
+  ]
+}
