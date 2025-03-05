@@ -122,7 +122,7 @@ export const Contact = () => {
                       href="mailto:contact@example.com" 
                       className="font-medium hover:text-primary transition-colors"
                     >
-                      contact@example.com
+                      maun2velsket@gmail.com
                     </a>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ export const Contact = () => {
                       href="tel:+1234567890" 
                       className="font-medium hover:text-primary transition-colors"
                     >
-                      +1 (234) 567-890
+                      +27 769 099 742
                     </a>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-foreground/60">Location</div>
-                    <div className="font-medium">San Francisco, CA</div>
+                    <div className="font-medium">Gauteng, Randfontein</div>
                   </div>
                 </div>
               </div>
