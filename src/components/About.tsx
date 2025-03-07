@@ -168,7 +168,7 @@ export const About = () => {
               <div className="space-y-8">
                 <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full before:-ml-1.5 before:ring-4 before:ring-secondary">
                   <div className="font-semibold">
-                    Senior Full-Stack Developer
+                   Front-End Developer
                   </div>
                   <div className="text-primary/80 font-medium mb-2">
                     OpenLearn JS developer. • 2019 - Present
@@ -192,17 +192,7 @@ export const About = () => {
                   </p>
                 </div>
 
-                <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary/60 before:rounded-full before:-ml-1.5 before:ring-4 before:ring-secondary">
-                  <div className="font-semibold">Frontend Developer</div>
-                  <div className="text-primary/80 font-medium mb-2">
-                    Creative Digital • 2016 - 2018
-                  </div>
-                  <p className="text-foreground/70 text-sm">
-                    Built interactive UI components for client websites,
-                    implemented responsive designs, and optimized website
-                    performance and accessibility.
-                  </p>
-                </div>
+              
               </div>
             </div>
 
