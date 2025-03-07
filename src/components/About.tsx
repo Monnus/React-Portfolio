@@ -171,7 +171,7 @@ export const About = () => {
                     Senior Full-Stack Developer
                   </div>
                   <div className="text-primary/80 font-medium mb-2">
-                    Tech Innovations Inc. • 2020 - Present
+                    OpenLearn JS developer. • 2019 - Present
                   </div>
                   <p className="text-foreground/70 text-sm">
                     Lead development of enterprise web applications, manage a
@@ -183,12 +183,12 @@ export const About = () => {
                 <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary/80 before:rounded-full before:-ml-1.5 before:ring-4 before:ring-secondary">
                   <div className="font-semibold">Full-Stack Developer</div>
                   <div className="text-primary/80 font-medium mb-2">
-                    WebSolutions Co. • 2018 - 2020
+                    CodeTribe, Soweto• 2022 - 2023
                   </div>
                   <p className="text-foreground/70 text-sm">
                     Developed responsive web applications using React and
-                    Node.js, collaborated with design and product teams, and
-                    improved API performance by 35%.
+                    Firebase.js, React-Native(expo), collaborated with design and product teams, and
+                    improved API performance and consistent practical code.
                   </p>
                 </div>
 
@@ -214,7 +214,7 @@ export const About = () => {
                 <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full before:-ml-1.5 before:ring-4 before:ring-secondary">
                   <div className="font-semibold">AWS Certified Developer</div>
                   <div className="text-primary/80 font-medium mb-2">
-                    Amazon Web Services • 2022
+                    Amazon Web Services • 2024
                   </div>
                   <p className="text-foreground/70 text-sm">
                     Specialized in deploying, managing, and scaling applications
@@ -223,26 +223,25 @@ export const About = () => {
                 </div>
 
                 <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary/80 before:rounded-full before:-ml-1.5 before:ring-4 before:ring-secondary">
-                  <div className="font-semibold">M.S. in Computer Science</div>
+                  <div className="font-semibold">FreeCode Camp</div>
                   <div className="text-primary/80 font-medium mb-2">
-                    Stanford University • 2014 - 2016
+                     • 2021 - 2022
                   </div>
                   <p className="text-foreground/70 text-sm">
                     Specialized in web technologies and distributed systems.
-                    Thesis on scalable real-time applications.
+                    Thesis on scalable real-time applications, responsive design
                   </p>
                 </div>
 
                 <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary/60 before:rounded-full before:-ml-1.5 before:ring-4 before:ring-secondary">
                   <div className="font-semibold">
-                    B.S. in Software Engineering
+                  Microsoft azure
                   </div>
                   <div className="text-primary/80 font-medium mb-2">
-                    MIT • 2010 - 2014
+                    - 2023 
                   </div>
                   <p className="text-foreground/70 text-sm">
-                    Graduated with honors. Focus on software architecture and
-                    web development.
+                    Graduated fundementals of Gen AI. Focus on basic knowlegde and understanding
                   </p>
                 </div>
               </div>
