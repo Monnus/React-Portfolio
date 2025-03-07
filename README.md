@@ -1,69 +1,66 @@
-# Welcome to your Lovable project
+# 🌟 Full-Stack Developer | Passion for Clean Code & Scalable Solutions  
 
-## Project info
+## 👋 About Me  
+I am a **dedicated Software Developer** passionate about crafting engaging digital experiences through clean, efficient, and maintainable code. My expertise lies in **React, React Native, JavaScript (ES6+), and TypeScript**, allowing me to build both **web and mobile applications** that are scalable and user-friendly.  
 
-**URL**: https://lovable.dev/projects/0994e3b8-6ead-466d-a2c3-3604ba1eaa10
+With a strong technical foundation and a commitment to **continuous learning**, I am always looking for ways to improve performance, enhance user experience, and contribute meaningful solutions to development teams.  
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Experience  
 
-**Use Lovable**
+### **Front-End Developer**  
+**OpenLearn JS Developer • 2019 - Present**  
+✔ Led development of **enterprise web applications**  
+✔ Managed a team of **5 developers**  
+✔ Implemented **CI/CD pipelines** for seamless deployment  
+✔ Optimized app performance, reducing **loading time by 40%**  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0994e3b8-6ead-466d-a2c3-3604ba1eaa10) and start prompting.
+### **Full-Stack Developer**  
+**CodeTribe, Soweto • 2022 - 2023**  
+✔ Developed **responsive web applications** using **React & Firebase**  
+✔ Built **mobile applications** with **React Native (Expo)**  
+✔ Collaborated with **design & product teams** for a seamless UX  
+✔ Improved **API performance** and ensured scalable, maintainable code  
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🎓 Education & Certifications  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### **AWS Certified Developer**  
+📍 *Amazon Web Services • 2024*  
+- Specialized in **deploying, managing, and scaling applications** on AWS  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### **Full-Stack Web Development**  
+📍 *FreeCodeCamp • 2021 - 2022*  
+- Specialized in **web technologies & distributed systems**  
+- Developed a **thesis on scalable real-time applications & responsive design**  
 
-Follow these steps:
+### **Microsoft Azure Fundamentals**  
+📍 *Microsoft • 2023*  
+- Completed **Gen AI fundamentals** course  
+- Gained a solid foundation in **cloud computing & AI**  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠 Technical Skills  
+✔ **Front-End**: React, React Native, TypeScript, JavaScript (ES6+), Next.js, Vite  
+✔ **Back-End**: Node.js, Firebase, AWS Lambda  
+✔ **Databases**: MongoDB, DynamoDB  
+✔ **DevOps & Tools**: CI/CD, Git, Docker, AWS Amplify  
+✔ **Other**: UI/UX Design Principles, Agile & Scrum  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 💡 What I Bring to the Table  
+🔹 Expertise in **React, Node.js, and modern JavaScript** for **scalable applications**  
+🔹 Experience in **building everything** from **small business websites** to **enterprise applications**  
+🔹 Passion for **clean code, performance optimization, and best practices**  
+🔹 A love for **exploring new technologies** and contributing to **open-source projects**  
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/0994e3b8-6ead-466d-a2c3-3604ba1eaa10) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## 📫 Let’s Connect!  
+📌 **Portfolio Website**: [YourWebsite.com](#)  
+📌 **GitHub**: [github.com/Monnus](https://github.com/Monnus)  
+📌 **LinkedIn**: [linkedin.com/in/yourname](#)  
