@@ -19,7 +19,7 @@ export const Footer = () => {
               className="text-xl font-medium transition-colors hover:text-primary/80 mb-4 inline-block"
               aria-label="Go to homepage"
             >
-              dev<span className="text-primary font-semibold">folio</span>
+              dev<span className="text-primary font-semibold">Portfolio</span>
             </a>
             <p className="text-foreground/70 mb-6 max-w-md">
               Full-stack developer passionate about creating intuitive and performant web applications 
@@ -27,7 +27,7 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://github.com/Monnus" 
                 className="p-2 text-foreground/70 hover:text-primary transition-colors"
                 aria-label="GitHub"
               >
@@ -43,7 +43,7 @@ export const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/maundrian-velsket-8859421ba/" 
                 className="p-2 text-foreground/70 hover:text-primary transition-colors"
                 aria-label="LinkedIn"
               >
