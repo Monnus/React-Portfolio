@@ -63,4 +63,4 @@ With a strong technical foundation and a commitment to **continuous learning**, 
 ## 📫 Let’s Connect!  
 📌 **Portfolio Website**: [YourWebsite.com](#)  
 📌 **GitHub**: [github.com/Monnus](https://github.com/Monnus)  
-📌 **LinkedIn**: [linkedin.com/in/yourname](#)  
+📌 **LinkedIn**: [linkedin.com/in/maundrian](#)  
