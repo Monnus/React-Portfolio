@@ -34,3 +34,4 @@ dist-ssr
 # Windows system files
 Thumbs.db
 ehthumbs.db
+.qodo
