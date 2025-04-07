@@ -55,94 +55,82 @@ const projects: Project[] = [
 export const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
-
+  const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("opacity-100");
-            entry.target.classList.add("translate-y-0");
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          if (sectionRef.current) {
+            observer.unobserve(sectionRef.current);
           }
-        });
+        }
       },
       { threshold: 0.1 }
     );
-
+    
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
-    projectRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
+    
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
-
-      projectRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
     };
   }, []);
-
+  
   return (
-    <section
-      id="projects"
+    <section 
+      id="projects" 
       className="py-24 px-6 bg-secondary/30"
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-2xl mx-auto text-center mb-16 opacity-0 translate-y-4 transition-all duration-700">
+        <div className="max-w-2xl mx-auto text-center mb-16 opacity-0 translate-y-4 transition-all duration-700"
+             style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(4px)' }}>
           <span className="text-sm font-medium bg-secondary text-primary/90 px-4 py-1.5 rounded-full inline-block mb-4">
             Portfolio
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Featured Projects
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Featured Projects</h2>
           <p className="text-lg text-foreground/70">
-            A collection of my recent work across various technologies and
-            domains. Each project represents a unique challenge and solution.
+            A collection of my recent work across various technologies and domains. 
+            Each project represents a unique challenge and solution.
           </p>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.id}
-              ref={(el) => (projectRefs.current[index] = el)}
               className={cn(
                 "card-hover opacity-0 translate-y-8 transition-all duration-700",
-                `delay-[${index * 200}ms]`
               )}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ 
+                opacity: isVisible ? 1 : 0, 
+                transform: isVisible ? 'translateY(0)' : 'translateY(8px)',
+                transitionDelay: `${index * 100}ms`
+              }}
               onMouseEnter={() => setActiveProject(project.id)}
               onMouseLeave={() => setActiveProject(null)}
             >
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-full flex flex-col">
                 <div className="relative overflow-hidden aspect-video">
-                  <img
-                    src={project.image}
+                  <img 
+                    src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
                     style={{
-                      transform:
-                        activeProject === project.id
-                          ? "scale(1.05)"
-                          : "scale(1)",
+                      transform: activeProject === project.id ? 'scale(1.05)' : 'scale(1)'
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
                     <div>
-                      <h3 className="text-white text-xl font-semibold">
-                        {project.title}
-                      </h3>
+                      <h3 className="text-white text-xl font-semibold">{project.title}</h3>
                       <div className="mt-2 flex flex-wrap gap-2">
                         {project.tags.slice(0, 3).map((tag) => (
-                          <span
+                          <span 
                             key={tag}
                             className="text-xs font-medium bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full"
                           >
@@ -154,15 +142,13 @@ export const Projects = () => {
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-semibold mb-3">
-                    {project.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="text-foreground/70 text-sm mb-4 flex-1">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
-                      <span
+                      <span 
                         key={tag}
                         className="text-xs font-medium bg-secondary text-primary/80 px-2 py-1 rounded-full"
                       >
@@ -170,23 +156,23 @@ export const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <a
+                  <a 
                     href={project.link}
                     className="text-sm font-medium text-primary hover:text-primary/80 transition-colors inline-flex items-center"
                   >
                     View Project
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 ml-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-4 w-4 ml-1" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
                       stroke="currentColor"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
                       />
                     </svg>
                   </a>
@@ -195,9 +181,10 @@ export const Projects = () => {
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-12 opacity-0 translate-y-4 transition-all duration-700 delay-500">
-          <a
+        
+        <div className="text-center mt-12 opacity-0 translate-y-4 transition-all duration-700 delay-500"
+             style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(4px)' }}>
+          <a 
             href="#"
             className="inline-flex items-center justify-center h-12 px-6 font-medium border border-primary/20 text-primary rounded-lg transition-all hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
           >
