@@ -50,6 +50,16 @@ const projects: Project[] = [
     image: "https://www.electronics-lab.com/wp-content/uploads/2022/03/Computer-Vision-Applications.jpg",
     link: "https://main.d3597sr9908kji.amplifyapp.com",
   },
+   {
+    id: 5,
+    title: "Serverless Invoice Scanner",
+    description: `A Serverless Invoice Scanner built using AWS cloud services and a React front-end,
+     designed to analyze uploaded invoices and extract key data using Amazon Textract.
+    The extracted data is stored in DynamoDB and can be viewed via a front-end React app connected to an API Gateway.`,
+    tags: ["api", "aws-lambda","dynamodb", "s3-bucket", "textract"],
+    image: "https://cdn.prod.website-files.com/63e56114746188c54e2936e0/65e5dd2f52fb7b300ebc5c48_OCR%20invoice%20processing.png",
+    link: "https://main.d3mvx09cobtz73.amplifyapp.com/",
+  }
 ];
 
 export const Projects = () => {
