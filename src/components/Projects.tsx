@@ -1,5 +1,22 @@
+
 import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 
 interface Project {
   id: number;
@@ -66,6 +83,7 @@ export const Projects = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -91,6 +109,91 @@ export const Projects = () => {
     };
   }, []);
   
+  const renderProjectCard = (project: Project, index: number) => {
+    return (
+      <div
+        key={project.id}
+        className={cn(
+          "card-hover h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm",
+          !isMobile && "opacity-0 translate-y-8 transition-all duration-700",
+        )}
+        style={
+          !isMobile
+            ? {
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? "translateY(0)" : "translateY(8px)",
+                transitionDelay: `${index * 100}ms`,
+              }
+            : {}
+        }
+        onMouseEnter={() => setActiveProject(project.id)}
+        onMouseLeave={() => setActiveProject(null)}
+      >
+        <div className="relative overflow-hidden aspect-video">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
+            style={{
+              transform: activeProject === project.id ? "scale(1.05)" : "scale(1)",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
+            <div>
+              <h3 className="text-white text-xl font-semibold">{project.title}</h3>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {project.tags.slice(0, 3).map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs font-medium bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="p-6 flex-1 flex flex-col">
+          <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+          <p className="text-foreground/70 text-sm mb-4 flex-1">
+            {project.description}
+          </p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-xs font-medium bg-secondary text-primary/80 px-2 py-1 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <a
+            href={project.link}
+            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors inline-flex items-center"
+          >
+            View Project
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 ml-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    );
+  };
+  
   return (
     <section 
       id="projects" 
@@ -98,8 +201,13 @@ export const Projects = () => {
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="max-w-2xl mx-auto text-center mb-16 opacity-0 translate-y-4 transition-all duration-700"
-             style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(4px)' }}>
+        <div 
+          className="max-w-2xl mx-auto text-center mb-16 opacity-0 translate-y-4 transition-all duration-700"
+          style={{ 
+            opacity: isVisible ? 1 : 0, 
+            transform: isVisible ? 'translateY(0)' : 'translateY(4px)' 
+          }}
+        >
           <span className="text-sm font-medium bg-secondary text-primary/90 px-4 py-1.5 rounded-full inline-block mb-4">
             Portfolio
           </span>
@@ -110,90 +218,35 @@ export const Projects = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={cn(
-                "card-hover opacity-0 translate-y-8 transition-all duration-700",
-              )}
-              style={{ 
-                opacity: isVisible ? 1 : 0, 
-                transform: isVisible ? 'translateY(0)' : 'translateY(8px)',
-                transitionDelay: `${index * 100}ms`
-              }}
-              onMouseEnter={() => setActiveProject(project.id)}
-              onMouseLeave={() => setActiveProject(null)}
-            >
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-full flex flex-col">
-                <div className="relative overflow-hidden aspect-video">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out"
-                    style={{
-                      transform: activeProject === project.id ? 'scale(1.05)' : 'scale(1)'
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 flex items-end p-6">
-                    <div>
-                      <h3 className="text-white text-xl font-semibold">{project.title}</h3>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {project.tags.slice(0, 3).map((tag) => (
-                          <span 
-                            key={tag}
-                            className="text-xs font-medium bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                  <p className="text-foreground/70 text-sm mb-4 flex-1">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="text-xs font-medium bg-secondary text-primary/80 px-2 py-1 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a 
-                    href={project.link}
-                    className="text-sm font-medium text-primary hover:text-primary/80 transition-colors inline-flex items-center"
-                  >
-                    View Project
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      className="h-4 w-4 ml-1" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M14 5l7 7m0 0l-7 7m7-7H3" 
-                      />
-                    </svg>
-                  </a>
-                </div>
+        {isMobile ? (
+          <div className="px-4">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {projects.map((project, index) => (
+                  <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
+                    {renderProjectCard(project, index)}
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-2 mt-4">
+                <CarouselPrevious className="static translate-y-0 translate-x-0" />
+                <CarouselNext className="static translate-y-0 translate-x-0" />
               </div>
-            </div>
-          ))}
-        </div>
+            </Carousel>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => renderProjectCard(project, index))}
+          </div>
+        )}
         
-        <div className="text-center mt-12 opacity-0 translate-y-4 transition-all duration-700 delay-500"
-             style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(4px)' }}>
+        <div 
+          className="text-center mt-12 opacity-0 translate-y-4 transition-all duration-700 delay-500"
+          style={{ 
+            opacity: isVisible ? 1 : 0, 
+            transform: isVisible ? 'translateY(0)' : 'translateY(4px)' 
+          }}
+        >
           <a 
             href="#"
             className="inline-flex items-center justify-center h-12 px-6 font-medium border border-primary/20 text-primary rounded-lg transition-all hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
