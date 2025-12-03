@@ -24,8 +24,8 @@ const skills: Skill[] = [
   {
     category: "Backend",
     items: [
-      { name: "Node.js", level: 60 },
-      { name: "Express", level: 50 },
+      { name: "Node.js", level: 30 },
+      { name: "Express", level: 40 },
       { name: "Python", level: 30 },
   
     ]
