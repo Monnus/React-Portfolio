@@ -138,7 +138,7 @@ export const About = () => {
                 Get In Touch
               </a>
               <a
-                href="https://drive.google.com/file/d/1Yj5Bim-qRy2z94NXXXGOt-AsM2xxendN/view?usp=sharing"
+                href="https://drive.google.com/file/d/1u2CqHUEGjB0yIzilXUyUxldkp9LVNkX9/view?usp=sharing"
                 className="inline-flex items-center justify-center h-12 px-6 font-medium border border-primary/20 text-primary rounded-lg transition-all hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
              download="Resume" >
                 Download CV
